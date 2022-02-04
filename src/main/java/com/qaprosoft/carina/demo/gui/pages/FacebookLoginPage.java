@@ -18,7 +18,7 @@ public class FacebookLoginPage extends AbstractPage {
     @FindBy(id="pass")
     private ExtendedWebElement passwordInput;
 
-    @FindBy(css="button")
+    @FindBy(name = "login")
     private ExtendedWebElement loginButton;
 
     public FacebookLoginPage(WebDriver driver) {
