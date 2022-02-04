@@ -10,14 +10,9 @@ public class GSMXperiaSonyPhonesPage extends AbstractPage {
     @FindBy(xpath = "//*[@id=\"review-body\"]/div[1]/ul/li[6]")
     private ExtendedWebElement xperiaProLink;
 
-
-    // Click Xperia 1
-    // Assert OS, memory, sound
     @FindBy(xpath = "//*[@id=\"review-body\"]/div[1]/ul/li[12]")
     private ExtendedWebElement xperiaOneLink;
 
-    // Click Sony
-    // Click Xperia 5
     @FindBy(xpath = "//*[@id=\"review-body\"]/div[1]/ul/li[11]")
     private ExtendedWebElement xperiaFiveLink;
 
