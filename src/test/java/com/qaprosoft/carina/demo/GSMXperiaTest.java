@@ -26,9 +26,6 @@ public class GSMXperiaTest implements IAbstractTest {
                 "Memory capacity mismatch.");
     }
 
-    // Click Sony
-    // Click Xperia 1
-    // Assert OS, memory, sound
     @Test()
     @MethodOwner(owner = "adavis")
     public void testXperia1() {
