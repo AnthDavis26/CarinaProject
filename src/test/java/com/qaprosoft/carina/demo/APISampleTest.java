@@ -108,4 +108,116 @@ public class APISampleTest implements IAbstractTest {
         deleteTodoMethod.callAPI();
         deleteTodoMethod.validateResponse();
     }
+
+    @Test()
+    public void testCreatePost() throws Exception {
+        LOGGER.info("test");
+        setCases("4555,54545");
+        PostPostMethod api = new PostPostMethod();
+        api.expectResponseStatus(HttpResponseStatusType.CREATED_201);
+        api.callAPI();
+        api.validateResponse();
+    }
+
+    @Test()
+    public void testGetPosts() {
+        GetPostMethod getPostMethod = new GetPostMethod();
+        getPostMethod.expectResponseStatus(HttpResponseStatusType.OK_200);
+        getPostMethod.callAPI();
+        getPostMethod.validateResponse(JSONCompareMode.STRICT, JsonCompareKeywords.ARRAY_CONTAINS.getKey());
+        getPostMethod.validateResponseAgainstSchema("api/posts/_get/rs.schema");
+    }
+
+    @Test()
+    @TestPriority(Priority.P1)
+    public void testDeletePosts() {
+        DeletePostMethod deletePostMethod = new DeletePostMethod();
+        deletePostMethod.expectResponseStatus(HttpResponseStatusType.OK_200);
+        deletePostMethod.callAPI();
+        deletePostMethod.validateResponse();
+    }
+
+    @Test()
+    public void testCreatePhoto() throws Exception {
+        LOGGER.info("test");
+        setCases("4555,54545");
+        PostPhotoMethod api = new PostPhotoMethod();
+        api.expectResponseStatus(HttpResponseStatusType.CREATED_201);
+        api.callAPI();
+        api.validateResponse();
+    }
+
+    @Test()
+    public void testGetPhotos() {
+        GetPhotoMethod getPhotoMethod = new GetPhotoMethod();
+        getPhotoMethod.expectResponseStatus(HttpResponseStatusType.OK_200);
+        getPhotoMethod.callAPI();
+        getPhotoMethod.validateResponse(JSONCompareMode.STRICT, JsonCompareKeywords.ARRAY_CONTAINS.getKey());
+        getPhotoMethod.validateResponseAgainstSchema("api/photos/_get/rs.schema");
+    }
+
+    @Test()
+    @TestPriority(Priority.P1)
+    public void testDeletePhotos() {
+        DeletePhotoMethod deletePhotoMethod = new DeletePhotoMethod();
+        deletePhotoMethod.expectResponseStatus(HttpResponseStatusType.OK_200);
+        deletePhotoMethod.callAPI();
+        deletePhotoMethod.validateResponse();
+    }
+
+    @Test()
+    public void testCreateAlbum() throws Exception {
+        LOGGER.info("test");
+        setCases("4555,54545");
+        PostAlbumMethod api = new PostAlbumMethod();
+        api.expectResponseStatus(HttpResponseStatusType.CREATED_201);
+        api.callAPI();
+        api.validateResponse();
+    }
+
+    @Test()
+    public void testGetAlbums() {
+        GetAlbumMethod getAlbumMethod = new GetAlbumMethod();
+        getAlbumMethod.expectResponseStatus(HttpResponseStatusType.OK_200);
+        getAlbumMethod.callAPI();
+        getAlbumMethod.validateResponse(JSONCompareMode.STRICT, JsonCompareKeywords.ARRAY_CONTAINS.getKey());
+        getAlbumMethod.validateResponseAgainstSchema("api/albums/_get/rs.schema");
+    }
+
+    @Test()
+    @TestPriority(Priority.P1)
+    public void testDeleteAlbums() {
+        DeleteAlbumMethod deleteAlbumMethod = new DeleteAlbumMethod();
+        deleteAlbumMethod.expectResponseStatus(HttpResponseStatusType.OK_200);
+        deleteAlbumMethod.callAPI();
+        deleteAlbumMethod.validateResponse();
+    }
+
+    @Test()
+    public void testCreateComment() throws Exception {
+        LOGGER.info("test");
+        setCases("4555,54545");
+        PostCommentMethod api = new PostCommentMethod();
+        api.expectResponseStatus(HttpResponseStatusType.CREATED_201);
+        api.callAPI();
+        api.validateResponse();
+    }
+
+    @Test()
+    public void testGetComments() {
+        GetCommentMethod getCommentMethod = new GetCommentMethod();
+        getCommentMethod.expectResponseStatus(HttpResponseStatusType.OK_200);
+        getCommentMethod.callAPI();
+        getCommentMethod.validateResponse(JSONCompareMode.STRICT, JsonCompareKeywords.ARRAY_CONTAINS.getKey());
+        getCommentMethod.validateResponseAgainstSchema("api/comments/_get/rs.schema");
+    }
+
+    @Test()
+    @TestPriority(Priority.P1)
+    public void testDeleteComments() {
+        DeleteCommentMethod deleteCommentMethod = new DeleteCommentMethod();
+        deleteCommentMethod.expectResponseStatus(HttpResponseStatusType.OK_200);
+        deleteCommentMethod.callAPI();
+        deleteCommentMethod.validateResponse();
+    }
 }
