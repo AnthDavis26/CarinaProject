@@ -1,0 +1,12 @@
+[
+  {
+    "userId": "regex:[\\d]",
+    "id" : 2,
+    "title" : "type:String"
+  },
+  {
+    "userId": 1,
+    "id": 4,
+    "title": "non esse culpa molestiae omnis sed optio"
+  }
+]
