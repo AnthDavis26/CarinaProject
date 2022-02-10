@@ -1,7 +1,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite verbose="1" name="Carina Demo Tests - API Sample" parallel="methods" thread-count="5">
 
-	<parameter name="suiteOwner" value="qpsdemo"/>
+	<parameter name="suiteOwner" value="antdavis"/>
 	<parameter name="jenkinsJobName" value="API-Demo-Test"/>
 	<parameter name="jenkinsJobType" value="api"/>
 
